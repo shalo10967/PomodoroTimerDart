@@ -134,7 +134,7 @@ class _PomodoroTabViewState extends State<PomodoroTabView> {
   Future<void> addTotalFocusTimer(int focusedMinutes) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     int getValues = sharedPreferences.getInt('totalFocus') ?? 0;
-    sharedPreferences.setInt('totalFocus', focusedMinutes + getValues);
+    sharedPreferences.setInt('totalFocus', getValues + 1);
   }
 
   Future<void> addFocusTimerNow(int focusedMinutes) async {

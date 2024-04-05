@@ -14,7 +14,10 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final screens = [const TabsNavigation(), const ProfileScreen()];
+    final screens = [
+      const TabsNavigation(),
+      ProfileScreen(key: Key('${DateTime.now().millisecondsSinceEpoch}'))
+    ];
 
     return Scaffold(
       body: IndexedStack(
